@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    background: #424f6f;
+    background: #72344e;
 }
 
 #container {
@@ -14,7 +14,7 @@ body {
     height: 400px;
     padding: 0;
     box-sizing: border-box;
-    background: #424f6f;
+    background: #72344e;
 }
 
 *:after,
@@ -75,12 +75,12 @@ body {
     display: block;
     width: 30px;
     height: 30px;
-    background: #252c49;
+    background: #010102;
     border-radius: 50%;
 }
 
 #spooky #body #mouth {
-    background: #252c49;
+    background: #79122c;
     margin: 25px auto 0;
     width: 60px;
     height: 30px;
@@ -117,7 +117,7 @@ body {
 
 #shadow {
     margin: -90px auto 0;
-    background: #252c49;
+    background: #ff3366;
     width: 180px;
     height: 40px;
     border-radius: 50%;
@@ -143,3 +143,99 @@ body {
         transform: scale(0.8);
     }
 }
+
+#spooky #body .ear {
+    position: absolute;
+    top: -2.2em;
+    width: 3.7em;
+    height: 3.7em;
+    background: black;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+#spooky #body .ear.left {
+    left: 50%;
+    transform: translateX(-30%);
+
+}
+
+#spooky #body .ear.right {
+    left: 50%;
+    transform: translateX(50%);
+
+}
+
+
+#spooky #body .ear.left { left: 1.5em; }
+#spooky #body .ear.right { right: 1.5em; }
+
+.bow {
+    position: absolute;
+    top: -1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    animation: bow-sway 2s infinite ease-in-out alternate;
+}
+
+@keyframes bow-sway {
+    0% { transform: translateX(-50%) rotate(-2deg); }
+    50% { transform: translateX(-50%) rotate(2deg); }
+    100% { transform: translateX(-50%) rotate(-2deg); }
+}
+
+
+.bow-left, .bow-right {
+    width: 3em;
+    height: 3em;
+    background: #ff3366;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.bow-left::before, .bow-left::after,
+.bow-right::before, .bow-right::after {
+    content: '';
+    position: absolute;
+    width: 0.5em;
+    height: 0.5em;
+    background: white;
+    border-radius: 50%;
+}
+
+.bow-left::before { top: 0.5em; left: 0.5em; }
+.bow-left::after { bottom: 0.5em; right: 0.5em; }
+.bow-right::before { top: 0.5em; right: 0.5em; }
+.bow-right::after { bottom: 0.5em; left: 0.5em; }
+
+.bow-left { transform: rotate(-20deg); }
+.bow-right { transform: rotate(20deg); }
+
+.bow-center {
+    width: 1.2em;
+    height: 1.2em;
+    background: #ff3366;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.9em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bow {
+    position: absolute;
+    top: -1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+
+    width: 7em;
+    display: flex; 
+    justify-content: center;
+    gap: 0.5em;
+
+    animation: bow-sway 2s infinite ease-in-out alternate;
+}
+

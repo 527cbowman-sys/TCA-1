@@ -1,0 +1,12 @@
+body {
+    background-color: navy;
+    color: white;
+}
+
+a, div {
+    padding: 4%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
